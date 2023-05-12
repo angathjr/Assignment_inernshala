@@ -22,7 +22,35 @@ class DestinationScreen extends StatelessWidget {
             : CustomScrollView(
                 slivers: [
                   SliverAppBar(
-                    title: Text("hello"),
+                    title: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          width: width * 0.09,
+                          height: width * 0.09,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.white),
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.black,
+                            size: width * 0.04,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          width: width * 0.09,
+                          height: width * 0.09,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.white),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                            size: width * 0.05,
+                          ),
+                        )
+                      ],
+                    ),
                     expandedHeight: height * 0.35,
                     flexibleSpace: FlexibleSpaceBar(
                       background:
@@ -31,29 +59,24 @@ class DestinationScreen extends StatelessWidget {
 
                           SizedBox(
                         width: width,
-                        child: Stack(
-                          children: [
-                            CarouselSlider.builder(
-                                itemCount:
-                                    controller.lakes.value.bannerImages!.length,
-                                itemBuilder: (context, index, realIndex) {
-                                  return ClipRRect(
-                                    borderRadius: const BorderRadius.only(
-                                        bottomLeft: Radius.circular(25),
-                                        bottomRight: Radius.circular(25)),
-                                    child: Image.network(
-                                      controller
-                                          .lakes.value.bannerImages![index],
-                                      fit: BoxFit.cover,
-                                    ),
-                                  );
-                                },
-                                options: CarouselOptions(
-                                    autoPlay: true,
-                                    disableCenter: true,
-                                    viewportFraction: 1)),
-                          ],
-                        ),
+                        child: CarouselSlider.builder(
+                            itemCount:
+                                controller.lakes.value.bannerImages!.length,
+                            itemBuilder: (context, index, realIndex) {
+                              return ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                    bottomLeft: Radius.circular(25),
+                                    bottomRight: Radius.circular(25)),
+                                child: Image.network(
+                                  controller.lakes.value.bannerImages![index],
+                                  fit: BoxFit.cover,
+                                ),
+                              );
+                            },
+                            options: CarouselOptions(
+                                autoPlay: true,
+                                disableCenter: true,
+                                viewportFraction: 1)),
                       ),
                     ),
                   ),
@@ -146,8 +169,10 @@ class DestinationScreen extends StatelessWidget {
                                 controller.lakes.value.popularTreks!.length,
                           ),
                         ),
+
+                        //added space for just to scroll and make sure the slider collapses
                         SizedBox(
-                          height: height * 0.5,
+                          height: height * 0.4,
                         )
                       ]),
                     ),
