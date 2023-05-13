@@ -1,16 +1,17 @@
 # internshala_assignment
 
-A new Flutter project.
 
-## Getting Started
+# Screenshots
 
-This project is a starting point for a Flutter application.
+![Screenshot_2023-05-13-15-05-39-97_862d3722a361306e2fad9e7ee95f464d](https://github.com/angathjr/Assignment_inernshala/assets/81844880/52736486-ad5c-40b5-9d9a-39e0b4e5c5bd)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# video
+https://github.com/angathjr/Assignment_inernshala/assets/81844880/f4b752af-1dfc-4ae9-8b54-a399128749e6
+
+
+#apk file
+
+
+
